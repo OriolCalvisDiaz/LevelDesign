@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PathFollow : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PathFollow : MonoBehaviour
     public Transform PlayerBody;
     public Transform Position;
     public Transform ActualDestination;
+    public Text money;
+    public Text superMoney;
+    public Text canvasMedicine;
+    public Image lifeBar;
 
     public char Orientation = 'D';
     public float t;
@@ -98,6 +103,6 @@ public class PathFollow : MonoBehaviour
     
     public void GetInfected()
     {
-
+        lifeBar.fillAmount += 1.0f / 100.0f;
     }
 }
