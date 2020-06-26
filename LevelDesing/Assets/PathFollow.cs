@@ -73,7 +73,6 @@ public class PathFollow : MonoBehaviour
         float dist = Vector3.Distance(transform.position, ActualDestination.position);
         if (dist < 0.5f)
         {
-            Debug.Log("Hola");
             ActualDestination.gameObject.GetComponent<PathPoints>().Direction(this);
         }
         
